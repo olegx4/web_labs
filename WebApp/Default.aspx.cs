@@ -13,7 +13,8 @@ namespace WebApp
         {
 
             outputLabel.Text = DateTime.Now.ToLongTimeString();
-            
+
+            //ввTextBoxDate.Attributes.Add("readonly", "readonly");
             //TextBoxDate.TextChanged += new EventHandler(TextBoxDay_TextChanged);
             //TextBoxMonth.TextChanged += new EventHandler(TextBoxDay_TextChanged);
         }
@@ -73,8 +74,9 @@ namespace WebApp
 
         protected void TextBoxDate_TextChanged(object sender, EventArgs e)
         {
+            
             outputTextTimeNow.Text = "";
-           
+            //TextBoxDate.Focus();
         }
     }
 }
