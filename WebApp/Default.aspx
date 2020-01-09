@@ -11,6 +11,10 @@
             display: inline-block;
             width:92px;
         }
+        #Checkbox1 {
+            width: 30px;
+            margin-left: 153px;
+        }
     </style>
 </head>
 
@@ -30,16 +34,17 @@
             <asp:TextBox ID="FioTxtBox" runat="server" Width="287px"></asp:TextBox>
         </p>
         <p>
-            Виберіть дату народження:
-                 
-                </p>
+            Виберіть дату народження:<asp:CheckBoxList ID="CheckBoxList1" runat="server" AutoPostBack="True" Height="16px" OnSelectedIndexChanged="CheckBoxList1_SelectedIndexChanged" ValidateRequestMode="Disabled" Width="141px">
+                <asp:ListItem Value="yesTime">Врахувати час</asp:ListItem>
+            </asp:CheckBoxList>
+&nbsp;</p>
       
         <div class="container">
             <%--<span>Ден</span>
             <span>Місяць</span>
             <span>Рік (YYYY)</span>--%>
 
-                <asp:TextBox ID="TextBoxDate" runat="server" MaxLength="2" OnTextChanged="TextBoxDate_TextChanged" TextMode="Date" Width="277px" AutoPostBack="True"></asp:TextBox>
+                <asp:TextBox ID="TextBoxDate" runat="server" MaxLength="2" OnTextChanged="TextBoxDate_TextChanged" TextMode="Date" Width="324px" AutoPostBack="True"></asp:TextBox>
             &nbsp;Обрахувати скільки часу ви прожили:
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Go!" />
             <br />
@@ -55,7 +60,7 @@
 
         <p>
             &nbsp;</p>
-        <asp:TextBox ID="TextBoxRecords" runat="server" Height="125px" ReadOnly="True" TextMode="MultiLine" Width="568px" Wrap="False"></asp:TextBox>
+        <asp:TextBox ID="TextBoxRecords" runat="server" Height="125px" ReadOnly="True" TextMode="MultiLine" Width="993px" Wrap="False"></asp:TextBox>
     </form>
 </body>
 </html>

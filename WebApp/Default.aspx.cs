@@ -14,18 +14,9 @@ namespace WebApp
 
             outputLabel.Text = DateTime.Now.ToLongTimeString();
 
-            //ввTextBoxDate.Attributes.Add("readonly", "readonly");
-            //TextBoxDate.TextChanged += new EventHandler(TextBoxDay_TextChanged);
-            //TextBoxMonth.TextChanged += new EventHandler(TextBoxDay_TextChanged);
+          
         }
 
-        //protected void TextBoxDay_TextChanged(object sender, EventArgs e)
-        //{
-        //    if (TextBoxDate.Text.Length == TextBoxDate.MaxLength)
-        //    {
-        //        TextBoxMonth.Focus();
-        //    }
-        //}
 
         protected void Button1_Click(object sender, EventArgs e)
         {
@@ -44,7 +35,7 @@ namespace WebApp
                                                     " Хвилин: " + res.Minutes +
                                                     " Секунд: " + res.Seconds);
                         outputTextTimeNow.Text = curRes;
-                        TextBoxRecords.Text += FioTxtBox.Text + " " + curRes + ";\n";
+                        TextBoxRecords.Text += FioTxtBox.Text + " " + curRes + " для даних: "+ begin + " - "+ end +  ";\n";
                     }
                     else
                     {
@@ -64,19 +55,21 @@ namespace WebApp
                 outputTextTimeNow.ForeColor = System.Drawing.Color.Red;
                 outputTextTimeNow.Text = "Дата вашого народження не може бути пустою!";
             }
-            
-
-            
-
-
-            //Console.WriteLine(res);
         }
 
         protected void TextBoxDate_TextChanged(object sender, EventArgs e)
         {
             
             outputTextTimeNow.Text = "";
-            //TextBoxDate.Focus();
+        }
+
+        protected void CheckBoxList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(CheckBoxList1.Text == "yesTime")
+                TextBoxDate.TextMode = TextBoxMode.DateTimeLocal;
+            else
+                TextBoxDate.TextMode = TextBoxMode.Date;
+
         }
     }
 }
