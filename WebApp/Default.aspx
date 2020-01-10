@@ -26,7 +26,7 @@
         </h2>
 
         <a href="Lab1_task2.aspx" style="z-index: 1; left: 605px; top: 21px; position: absolute">Завдання №2</a>
-
+        <a href="Lab1_task3.aspx" style="z-index: 1; left: 712px; top: 21px; position: absolute">Завдання №3</a>
 
         Поточний час:
         <asp:Label ID="outputLabel" runat="server" OnLoad="Page_Load" Text="Label"></asp:Label>

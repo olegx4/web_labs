@@ -12,6 +12,8 @@
     </style>
 </head>
 <body>
+    <a href="Default.aspx" style="z-index: 1; left: 605px; top: 21px; position: absolute">Завдання №1</a>
+        <a href="Lab1_task3.aspx" style="z-index: 1; left: 712px; top: 21px; position: absolute">Завдання №3</a>
     <form id="form1" runat="server">
         <div>
             <h2>Великі композитори та їх твори:

@@ -11,18 +11,14 @@ namespace WebApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
             outputLabel.Text = DateTime.Now.ToLongTimeString();
-
-          
         }
-
-
+        
         protected void Button1_Click(object sender, EventArgs e)
         {
             try
             {
-                if(FioTxtBox.Text != "")
+                if (FioTxtBox.Text != "")
                 {
                     DateTime begin = Convert.ToDateTime(TextBoxDate.Text);
                     DateTime end = DateTime.Now;
@@ -35,7 +31,7 @@ namespace WebApp
                                                     " Хвилин: " + res.Minutes +
                                                     " Секунд: " + res.Seconds);
                         outputTextTimeNow.Text = curRes;
-                        TextBoxRecords.Text += FioTxtBox.Text + " " + curRes + " для даних: "+ begin + " - "+ end +  ";\n";
+                        TextBoxRecords.Text += FioTxtBox.Text + " " + curRes + " для даних: " + begin + " - " + end + ";\n";
                     }
                     else
                     {
@@ -47,7 +43,7 @@ namespace WebApp
                 {
                     outputTextTimeNow.ForeColor = System.Drawing.Color.Red;
                     outputTextTimeNow.Text = "Поле ПІБ не має бути пустим.";
-                }           
+                }
             }
             catch
             {
@@ -59,13 +55,13 @@ namespace WebApp
 
         protected void TextBoxDate_TextChanged(object sender, EventArgs e)
         {
-            
+
             outputTextTimeNow.Text = "";
         }
 
         protected void CheckBoxList1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(CheckBoxList1.Text == "yesTime")
+            if (CheckBoxList1.Text == "yesTime")
                 TextBoxDate.TextMode = TextBoxMode.DateTimeLocal;
             else
                 TextBoxDate.TextMode = TextBoxMode.Date;
