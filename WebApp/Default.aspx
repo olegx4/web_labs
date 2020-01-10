@@ -22,13 +22,12 @@
 <body style="height: 174px">
     <form id="form1" runat="server">
         <asp:ScriptManager runat="server"></asp:ScriptManager>
-        <div>
-            <h2 style="z-index: 1; left: 9px; top: 24px; position: absolute; height: 26px; width: 1299px">Калькулятор прожитого часу
-            </h2>
-            <span>
-                <a href="Lab1_task2.aspx" style="z-index: 1; left: 442px; top: 33px; position: absolute">Завдання №2</a>
-            </span>
-        </div>
+        <h2>Калькулятор прожитого часу
+        </h2>
+
+        <a href="Lab1_task2.aspx" style="z-index: 1; left: 605px; top: 21px; position: absolute">Завдання №2</a>
+
+
         Поточний час:
         <asp:Label ID="outputLabel" runat="server" OnLoad="Page_Load" Text="Label"></asp:Label>
         &nbsp;<p>
